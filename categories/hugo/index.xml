@@ -67,12 +67,12 @@ serve_site() # then hit stop&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;This part got a little fuzzy for me, because I ran into several problems including SSH authentication, the R Project Git confusion I mentioned above, and I seemed to also have a problem using the git submodule command on an empty repo. So this could probably be tweaked over time, because I’m not sure if all the steps I took are required in sequence.&lt;/p&gt;
 &lt;p&gt;Open your terminal/Git Bash and &lt;code&gt;cd&lt;/code&gt; to your project directory for the source files (website-hugo to match my github repo, in my case). If you’re not set up with SSH yet, &lt;a href=&#34;https://help.github.com/articles/connecting-to-github-with-ssh/&#34;&gt;do that here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Remove the public folder&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;rm -r public/&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm -r public/&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Initialize a git repository&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git init
 git remote add origin git@github.com:username/website-hugo.git&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Try linking the public folder with your username.github.io repo via a submodule now, but it didn’t work for me just yet…&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;git submodule add git@github.com:username/username.github.io.git public&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git submodule add git@github.com:username/username.github.io.git public&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Instead, I had to commit and push my hugo source files first, then run the submodule command&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git add -A
 git commit -m &amp;#39;initial commit&amp;#39;

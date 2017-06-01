@@ -295,12 +295,12 @@ serve_site() # then hit stop</code></pre>
 <p>This part got a little fuzzy for me, because I ran into several problems including SSH authentication, the R Project Git confusion I mentioned above, and I seemed to also have a problem using the git submodule command on an empty repo. So this could probably be tweaked over time, because I’m not sure if all the steps I took are required in sequence.</p>
 <p>Open your terminal/Git Bash and <code>cd</code> to your project directory for the source files (website-hugo to match my github repo, in my case). If you’re not set up with SSH yet, <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">do that here</a>.</p>
 <p>Remove the public folder</p>
-<p><code>rm -r public/</code></p>
+<pre class="r"><code>rm -r public/</code></pre>
 <p>Initialize a git repository</p>
 <pre class="r"><code>git init
 git remote add origin git@github.com:username/website-hugo.git</code></pre>
 <p>Try linking the public folder with your username.github.io repo via a submodule now, but it didn’t work for me just yet…</p>
-<p><code>git submodule add git@github.com:username/username.github.io.git public</code></p>
+<pre class="r"><code>git submodule add git@github.com:username/username.github.io.git public</code></pre>
 <p>Instead, I had to commit and push my hugo source files first, then run the submodule command</p>
 <pre class="r"><code>git add -A
 git commit -m &#39;initial commit&#39;

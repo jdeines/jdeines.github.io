@@ -73,7 +73,9 @@ Open your terminal/Git Bash and `cd` to your project directory for the source fi
 
 Remove the public folder
 
-`rm -r public/`
+```{r bash, eval=FALSE}
+rm -r public/
+```
 
 Initialize a git repository 
 
@@ -84,7 +86,11 @@ git remote add origin git@github.com:username/website-hugo.git
 
 Try linking the public folder with your username.github.io repo via a submodule now, but it didn't work for me just yet...
 
-`git submodule add git@github.com:username/username.github.io.git public`
+```{r bash5, eval=FALSE}
+git submodule add git@github.com:username/username.github.io.git public
+```
+
+
 
 Instead, I had to commit and push my hugo source files first, then run the submodule command
 
