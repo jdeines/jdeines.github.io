@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>/post/r-blogdown-hugo-and-github-website/</loc>
+      <lastmod>2017-05-31T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/academic/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
     </url>
@@ -226,8 +235,28 @@
     
     <url>
     
+      <loc>/categories/github/</loc>
+      <lastmod>2017-05-31T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/tags/hugo/</loc>
       <lastmod>2016-04-20T12:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/hugo/</loc>
+      <lastmod>2017-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -276,8 +305,18 @@
     
     <url>
     
+      <loc>/tags/r/</loc>
+      <lastmod>2017-05-31T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>/categories/r/</loc>
-      <lastmod>2015-07-23T21:13:14-05:00</lastmod>
+      <lastmod>2017-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -308,6 +347,16 @@
     
       <loc>/tags/</loc>
       <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>/categories/website/</loc>
+      <lastmod>2017-05-31T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
