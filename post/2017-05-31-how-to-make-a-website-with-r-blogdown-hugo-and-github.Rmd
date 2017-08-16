@@ -135,6 +135,9 @@ And Voila! your website should now be available at username.github.io, and you s
 I had also made a local repository for username.github.io...but I'm not sure if that's necessary either. I haven't used it yet, and you can always recreate the files pretty easily with blogdown/Hugo. 
 
 ## Further tips on creating content
+
+Blogdown contains wrapper functions to run Huge commands. So instead of `hugo new post/my-article-name.md`, you enter wrapper functions directly into the console, such as `new_post(title="My article name")`, plus additional arguments as needed (see code examples below.)
+
 I'm learning this as we speak with this blog post, but the rmd = TRUE argument took me a moment.
 
 ```{r blogdown, eval=FALSE}
@@ -143,6 +146,10 @@ new_post(title='How to make a website with R blogdown, Hugo, and GitHub',
          rmd = TRUE, 
          categories = c('R', 'Hugo', 'Github','website'), 
          tags = c('R'))
+
+# to make a new publication page:
+new_content(path = 'publication/food-energy-water-nexus.md',
+            kind = 'publication')
 ```
 
 

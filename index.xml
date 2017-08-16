@@ -109,12 +109,17 @@ git push origin master&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div id=&#34;further-tips-on-creating-content&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;Further tips on creating content&lt;/h2&gt;
+&lt;p&gt;Blogdown contains wrapper functions to run Huge commands. So instead of &lt;code&gt;hugo new post/my-article-name.md&lt;/code&gt;, you enter wrapper functions directly into the console, such as &lt;code&gt;new_post(title=&amp;quot;My article name&amp;quot;)&lt;/code&gt;, plus additional arguments as needed (see code examples below.)&lt;/p&gt;
 &lt;p&gt;I’m learning this as we speak with this blog post, but the rmd = TRUE argument took me a moment.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# to make a new blog post, using Rmd instead of md:
 new_post(title=&amp;#39;How to make a website with R blogdown, Hugo, and GitHub&amp;#39;, 
          rmd = TRUE, 
          categories = c(&amp;#39;R&amp;#39;, &amp;#39;Hugo&amp;#39;, &amp;#39;Github&amp;#39;,&amp;#39;website&amp;#39;), 
-         tags = c(&amp;#39;R&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
+         tags = c(&amp;#39;R&amp;#39;))
+
+# to make a new publication page:
+new_content(path = &amp;#39;publication/food-energy-water-nexus.md&amp;#39;,
+            kind = &amp;#39;publication&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 </description>
     </item>
@@ -127,6 +132,15 @@ new_post(title=&amp;#39;How to make a website with R blogdown, Hugo, and GitHub&
       <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Complex water management in modern agriculture: Trends in the water-energy-food nexus over the High Plains Aquifer</title>
+      <link>/publication/food-water-energy-nexus/</link>
+      <pubDate>Sat, 01 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/food-water-energy-nexus/</guid>
+      <description></description>
     </item>
     
     <item>

@@ -337,12 +337,17 @@ git push origin master</code></pre>
 </div>
 <div id="further-tips-on-creating-content" class="section level2">
 <h2>Further tips on creating content</h2>
+<p>Blogdown contains wrapper functions to run Huge commands. So instead of <code>hugo new post/my-article-name.md</code>, you enter wrapper functions directly into the console, such as <code>new_post(title=&quot;My article name&quot;)</code>, plus additional arguments as needed (see code examples below.)</p>
 <p>I’m learning this as we speak with this blog post, but the rmd = TRUE argument took me a moment.</p>
 <pre class="r"><code># to make a new blog post, using Rmd instead of md:
 new_post(title=&#39;How to make a website with R blogdown, Hugo, and GitHub&#39;, 
          rmd = TRUE, 
          categories = c(&#39;R&#39;, &#39;Hugo&#39;, &#39;Github&#39;,&#39;website&#39;), 
-         tags = c(&#39;R&#39;))</code></pre>
+         tags = c(&#39;R&#39;))
+
+# to make a new publication page:
+new_content(path = &#39;publication/food-energy-water-nexus.md&#39;,
+            kind = &#39;publication&#39;)</code></pre>
 </div>
 
     </div>
