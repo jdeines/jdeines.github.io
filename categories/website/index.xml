@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on Coupled Human-Water Systems</title>
+    <link>/categories/website/</link>
+    <description>Recent content in Website on Coupled Human-Water Systems</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Jillian Deines</copyright>
+    <lastBuildDate>Wed, 31 May 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/categories/website/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to make a website with R blogdown, Hugo, and GitHub</title>
+      <link>/post/r-blogdown-hugo-and-github-website/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/post/r-blogdown-hugo-and-github-website/</guid>
+      <description>&lt;p&gt;R Markdown has long been a key component of my research workflow, providing a legible “lab notebook” for my daily analyses. I’ve wanted to transition my Wordpress-based website to GitHub Pages for some time, preferably using R Markdown to better integrate into my workflow. I was pretty thrilled to discover the R &lt;code&gt;blogdown&lt;/code&gt;, Hugo, and GitHub pages combination. I was able to set it up in an afternoon, and I have high hopes that it will be a good system to allow me to share my research and analyses with a broader audience.&lt;/p&gt;
+&lt;p&gt;This post is a “how-to”, but due to time limitations it’s more of a cheat-sheet to my future self than a full tutorial - basic Git/Github knowledge, etc., is assumed. For more complete coverage, here are a few resources I used to piece this together (note some really good information was also provided in the comment sections of these blog posts):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://proquestionasker.github.io/blog/Making_Site/&#34; class=&#34;uri&#34;&gt;https://proquestionasker.github.io/blog/Making_Site/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://robertmyles.github.io/2017/02/01/how-to-make-a-github-pages-blog-with-rstudio-and-hugo/&#34; class=&#34;uri&#34;&gt;http://robertmyles.github.io/2017/02/01/how-to-make-a-github-pages-blog-with-rstudio-and-hugo/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer: There’s a very good chance that the route I took was not the most efficient. I also use Windows and haven’t considered other systems for this post. User beware.&lt;/em&gt;&lt;/p&gt;
+&lt;div id=&#34;general-approach&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;General approach&lt;/h2&gt;
+&lt;p&gt;Github pages expects the website to be in the master branch, but blogdown stores all of the final site elements in a “public” subfolder. There seem to be two main approaches to get them to play nicely together. In one (described in the first link above), the user creates a sub branch in the main repository to store all of the source files in, leaving the public folder materials in the main branch. In the second method (described in the second post), the user creates two repositories on Github. One is the main username.github.io pages repo, the other is for all of the source files. These are then linked using Git Submodules. I chose to use the latter approach.&lt;/p&gt;
+&lt;div id=&#34;blogdown-and-hugo&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Blogdown and Hugo&lt;/h3&gt;
+&lt;p&gt;First thing’s first: the &lt;code&gt;blogdown&lt;/code&gt; package and &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; need to be installed. You can also begin choosing your theme at this point - &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;find a theme here&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# install Blogdown from Github
+install.packages(&amp;#39;devtools&amp;#39;)
+devtools::install_github(&amp;#39;rstudio/blogdown&amp;#39;)
+
+# use blogdown to install Hugo
+library(blogdown)
+install_hugo()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;github&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Github&lt;/h3&gt;
+&lt;p&gt;Set up your Github repositories. We’ll follow the “User Page” example where your website is going to use your Github username: username.github.io.&lt;/p&gt;
+&lt;p&gt;Using the &lt;code&gt;+&lt;/code&gt; icon in the upper right corner of your github page, create the following new repositories. Don’t bother creating a README.md, as &lt;code&gt;blogdown&lt;/code&gt; needs an empty directory. I think. At any rate, you don’t need a README.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;username.github.io, replacing ‘username’ with your username. This will be used to host your site on the master branch, using the ‘public’ folder produced from Hugo&lt;/li&gt;
+&lt;li&gt;website-hugo - This repository will contain all the source files from blogdown/Hugo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;back-to-rstudio&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Back to RStudio&lt;/h3&gt;
+&lt;p&gt;Next we need to create the site in RStudio using &lt;code&gt;blogdown&lt;/code&gt; and Hugo, and then link this with the two repositories. In my normal research life, I tend to use R Projects with the built-in git capabilities, but for some reason, that gave me a lot of problems in this case. So I created an R Project for the Hugo source files, but then manually added Git to the folder and manually linked it with Github via Git Bash (rather than just intializaing the R Project straight from the Github repository, which is what I usually do. That kept crashing for me today).&lt;/p&gt;
+&lt;p&gt;So, either create an R Project or just use a dedicated working directory for your website source files. If not using an R Project, set your working directory using &lt;code&gt;setwd(&amp;quot;path/to/your/folder&amp;quot;)&lt;/code&gt;. Note that commands such as &lt;code&gt;new_site()&lt;/code&gt; and &lt;code&gt;serve_site()&lt;/code&gt; will load your website in the RStudio viewer, and you will need to hit the stop sign to exit viewing mode and go back to coding.&lt;/p&gt;
+&lt;p&gt;This is also where you will install your theme, &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;found here&lt;/a&gt;. Being an academic type, I chose &lt;a href=&#34;http://themes.gohugo.io/academic/&#34;&gt;Academic&lt;/a&gt;.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# create your site
+library(blogdown)
+new_site() # then hit stop
+
+# install theme
+install_theme(&amp;quot;gcushen/hugo-academic&amp;quot;, theme_example = TRUE, update_config = TRUE)
+
+# make/view website with new theme
+serve_site() # then hit stop&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You’ll notice there are now a bunch of folders and files in your working directory, including the ‘public’ folder. Don’t move anything manually - we’ll do it in Git Bash.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;git-bashterminal&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Git Bash/Terminal&lt;/h3&gt;
+&lt;p&gt;This part got a little fuzzy for me, because I ran into several problems including SSH authentication, the R Project Git confusion I mentioned above, and I seemed to also have a problem using the git submodule command on an empty repo. So this could probably be tweaked over time, because I’m not sure if all the steps I took are required in sequence.&lt;/p&gt;
+&lt;p&gt;Open your terminal/Git Bash and &lt;code&gt;cd&lt;/code&gt; to your project directory for the source files (website-hugo to match my github repo, in my case). If you’re not set up with SSH yet, &lt;a href=&#34;https://help.github.com/articles/connecting-to-github-with-ssh/&#34;&gt;do that here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Remove the public folder&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;rm -r public/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Initialize a git repository&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git init
+git remote add origin git@github.com:username/website-hugo.git&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Try linking the public folder with your username.github.io repo via a submodule now, but it didn’t work for me just yet…&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git submodule add git@github.com:username/username.github.io.git public&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Instead, I had to commit and push my hugo source files first, then run the submodule command&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;git add -A
+git commit -m &amp;#39;initial commit&amp;#39;
+git push origin master
+
+git submodule add git@github.com:username/username.github.io.git public&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Leave Git Bash open, but go back to R Studio&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;back-to-rstudio-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Back to RStudio&lt;/h3&gt;
+&lt;p&gt;Not really sure if this is necessary…but make a few changes to site, such as altering the config file or trying &lt;code&gt;new_post(&amp;quot;Hello World&amp;quot;)&lt;/code&gt;, then “compile” the site again.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# make a test post if you&amp;#39;re into that
+new_post(&amp;#39;Hello World&amp;#39;)
+
+# compile site changes
+serve_site() # then hit stop&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;back-to-git-bash&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Back to Git Bash&lt;/h3&gt;
+&lt;p&gt;Now we need to commit our new changes and push them to the “public” folder. So, if you were already in your project directory:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cd public
+
+git add -A
+git commit -m &amp;#39;initial site&amp;#39;
+git push origin master&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And Voila! your website should now be available at username.github.io, and you should have a whole mess of files in your username.github.io repository now. Repeat those steps for any website changes you make:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;work on your site in RStudio&lt;/li&gt;
+&lt;li&gt;run &lt;code&gt;serve_site()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;open Git Bash, cd to your public folder, and add/commit/push changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I had also made a local repository for username.github.io…but I’m not sure if that’s necessary either. I haven’t used it yet, and you can always recreate the files pretty easily with blogdown/Hugo.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;further-tips-on-creating-content&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Further tips on creating content&lt;/h2&gt;
+&lt;div id=&#34;new-page-types&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;New page types&lt;/h3&gt;
+&lt;p&gt;Blogdown contains wrapper functions to run Huge commands. So instead of &lt;code&gt;hugo new post/my-article-name.md&lt;/code&gt;, you enter wrapper functions directly into the console, such as &lt;code&gt;new_post(title=&amp;quot;My article name&amp;quot;)&lt;/code&gt;, plus additional arguments as needed (see code examples below.)&lt;/p&gt;
+&lt;p&gt;I’m learning this as we speak with this blog post, but the rmd = TRUE argument took me a moment.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# to make a new blog post, using Rmd instead of md:
+new_post(title=&amp;#39;How to make a website with R blogdown, Hugo, and GitHub&amp;#39;, 
+         rmd = TRUE, 
+         categories = c(&amp;#39;R&amp;#39;, &amp;#39;Hugo&amp;#39;, &amp;#39;Github&amp;#39;,&amp;#39;website&amp;#39;), 
+         tags = c(&amp;#39;R&amp;#39;))
+
+# to make a new publication page:
+new_content(path = &amp;#39;publication/food-energy-water-nexus.md&amp;#39;,
+            kind = &amp;#39;publication&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;deleting-files-from-website&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Deleting files from website&lt;/h3&gt;
+&lt;p&gt;There’s no way to remove files from the website without re-generating the full public folder. There’s no problem when adding content, such as new posts, but the only (?) way to remove a post is to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;manually delete the contents of the public folder on your computer from the website-huge folder&lt;/li&gt;
+&lt;li&gt;delete the contents of jdeines.github.io using that cloned repository and commit&lt;/li&gt;
+&lt;li&gt;re-run &lt;code&gt;serve_site()&lt;/code&gt;, which will regenerate all of the pages&lt;/li&gt;
+&lt;li&gt;then add/commit/push that to Github.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
