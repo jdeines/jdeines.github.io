@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agriculture on Coupled Human-Water Systems</title>
+    <link>https://jdeines.github.io/tags/agriculture/</link>
+    <description>Recent content in Agriculture on Coupled Human-Water Systems</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Jillian Deines</copyright>
+    <lastBuildDate>Mon, 21 Aug 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/agriculture/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Remote Sensing of Irrigation</title>
+      <link>https://jdeines.github.io/project/irrigation-mapping/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/project/irrigation-mapping/</guid>
+      <description>&lt;p&gt;Irrigated agriculture is the world’s largest consumer of global freshwater. Irrigation greatly enhances agricultural yields and price stability, but overexploitation of water resources has depleted groundwater aquifers and reduced annual river discharge arounge the globe. Knowledge of where and when irrigation occurs is needed for sustainable water management and hydrological modeling, yet data on patterns of irrigation through time are surprisingly rare.&lt;/p&gt;
+
+&lt;p&gt;We combine satellite imagery, historic climate data, knowledge of crop water use patterns, and emerging cloud computing tools to produce high resolution annual maps of active irrigation in key agricultural areas.&lt;/p&gt;
+
+&lt;p&gt;The dramatic improvements in spatiotemporal resolution compared to previous efforts allow us to quantify trends and variability in irrigated area through time, providing critical insights into behavioral responses to irrigation drivers such as commodity prices and precipitation patterns.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

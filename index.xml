@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Coupled Human-Water Systems on Coupled Human-Water Systems</title>
-    <link>/</link>
+    <link>https://jdeines.github.io/</link>
     <description>Recent content in Coupled Human-Water Systems on Coupled Human-Water Systems</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,11 +11,43 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>CLASS Project</title>
+      <link>https://jdeines.github.io/project/class-external/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/project/class-external/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remote Sensing of Irrigation</title>
+      <link>https://jdeines.github.io/project/irrigation-mapping/</link>
+      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/project/irrigation-mapping/</guid>
+      <description>&lt;p&gt;Irrigated agriculture is the world’s largest consumer of global freshwater. Irrigation greatly enhances agricultural yields and price stability, but overexploitation of water resources has depleted groundwater aquifers and reduced annual river discharge arounge the globe. Knowledge of where and when irrigation occurs is needed for sustainable water management and hydrological modeling, yet data on patterns of irrigation through time are surprisingly rare.&lt;/p&gt;
+
+&lt;p&gt;We combine satellite imagery, historic climate data, knowledge of crop water use patterns, and emerging cloud computing tools to produce high resolution annual maps of active irrigation in key agricultural areas.&lt;/p&gt;
+
+&lt;p&gt;The dramatic improvements in spatiotemporal resolution compared to previous efforts allow us to quantify trends and variability in irrigated area through time, providing critical insights into behavioral responses to irrigation drivers such as commodity prices and precipitation patterns.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Quantifying changes in water use and groundwater availability in a megacity using novel integrated systems modeling</title>
+      <link>https://jdeines.github.io/publication/beijing-model/</link>
+      <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/publication/beijing-model/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>How to make a website with R blogdown, Hugo, and GitHub</title>
-      <link>/post/r-blogdown-hugo-and-github-website/</link>
+      <link>https://jdeines.github.io/post/r-blogdown-hugo-and-github-website/</link>
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>/post/r-blogdown-hugo-and-github-website/</guid>
+      <guid>https://jdeines.github.io/post/r-blogdown-hugo-and-github-website/</guid>
       <description>&lt;p&gt;R Markdown has long been a key component of my research workflow, providing a legible “lab notebook” for my daily analyses. I’ve wanted to transition my Wordpress-based website to GitHub Pages for some time, preferably using R Markdown to better integrate into my workflow. I was pretty thrilled to discover the R &lt;code&gt;blogdown&lt;/code&gt;, Hugo, and GitHub pages combination. I was able to set it up in an afternoon, and I have high hopes that it will be a good system to allow me to share my research and analyses with a broader audience.&lt;/p&gt;
 &lt;p&gt;This post is a “how-to”, but due to time limitations it’s more of a cheat-sheet to my future self than a full tutorial - basic Git/Github knowledge, etc., is assumed. For more complete coverage, here are a few resources I used to piece this together (note some really good information was also provided in the comment sections of these blog posts):&lt;/p&gt;
 &lt;ul&gt;
@@ -138,76 +170,93 @@ new_content(path = &amp;#39;publication/food-energy-water-nexus.md&amp;#39;,
     </item>
     
     <item>
-      <title>Example Talk</title>
-      <link>/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <title>Multi-year mapping of irrigated croplands over the US High Plains Aquifer using satellite data</title>
+      <link>https://jdeines.github.io/talk/agu2016/</link>
+      <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>https://jdeines.github.io/talk/agu2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Urban water sustainability: Framework and application</title>
+      <link>https://jdeines.github.io/publication/urban-water/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/publication/urban-water/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>Complex water management in modern agriculture: Trends in the water-energy-food nexus over the High Plains Aquifer</title>
-      <link>/publication/food-water-energy-nexus/</link>
+      <link>https://jdeines.github.io/publication/food-water-energy-nexus/</link>
       <pubDate>Sat, 01 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/food-water-energy-nexus/</guid>
+      <guid>https://jdeines.github.io/publication/food-water-energy-nexus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Changes in forest composition in Ohio between Euro-American Settlement and the Present</title>
-      <link>/publication/ohio-forests/</link>
+      <link>https://jdeines.github.io/publication/ohio-forests/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>/publication/ohio-forests/</guid>
+      <guid>https://jdeines.github.io/publication/ohio-forests/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>https://jdeines.github.io/about/</link>
       <pubDate>Thu, 05 May 2016 21:48:51 -0700</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://jdeines.github.io/about/</guid>
       <description>&lt;p&gt;This is a &amp;ldquo;hello world&amp;rdquo; example website for the &lt;a href=&#34;https://github.com/rstudio/blogdown&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;blogdown&lt;/strong&gt;&lt;/a&gt; package. The theme was forked from &lt;a href=&#34;https://github.com/jrutheiser/hugo-lithium-theme&#34; target=&#34;_blank&#34;&gt;@jrutheiser/hugo-lithium-theme&lt;/a&gt; and modified by &lt;a href=&#34;https://github.com/yihui/hugo-lithium-theme&#34; target=&#34;_blank&#34;&gt;Yihui Xie&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>/project/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <title>Telecoupling in urban water systems: An examination of Beijing&#39;s imported water supply</title>
+      <link>https://jdeines.github.io/publication/telecoupling-beijing/</link>
+      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/deep-learning/</guid>
-      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
-
-&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
-
-&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
-
-&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
-
-&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>External Project</title>
-      <link>/project/example-external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>/project/example-external-project/</guid>
+      <guid>https://jdeines.github.io/publication/telecoupling-beijing/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Telecoupling in urban water systems: An examination of Beijing&#39;s imported water supply</title>
-      <link>/publication/telecoupling-beijing/</link>
-      <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
+      <title>Quantifying the impact of a transboundary streamflow agreement on groundwater resources in the US High Plains Aquifer</title>
+      <link>https://jdeines.github.io/talk/agu2015/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/telecoupling-beijing/</guid>
+      <guid>https://jdeines.github.io/talk/agu2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telecoupling in urban water systems: an examination of Beijing&#39;s imported water supply</title>
+      <link>https://jdeines.github.io/talk/iale2015/</link>
+      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/talk/iale2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Traits associated with drought survival in three Australian tropical rainforest seedlings</title>
+      <link>https://jdeines.github.io/publication/drought-traits/</link>
+      <pubDate>Wed, 23 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/publication/drought-traits/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An assessment of invasion risk from assisted migration</title>
+      <link>https://jdeines.github.io/publication/assisted-migration/</link>
+      <pubDate>Sat, 28 Jun 2008 00:00:00 +0000</pubDate>
+      
+      <guid>https://jdeines.github.io/publication/assisted-migration/</guid>
       <description></description>
     </item>
     
