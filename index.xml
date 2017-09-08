@@ -11,6 +11,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Evaluation of stakeholder-driven groundwater management through integrated modeling and remote sensing in the US High Plains Aquifer</title>
+      <link>/talk/agu2017/</link>
+      <pubDate>Sat, 16 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/agu2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mapping annual irrigation dynamics in the northern US High Plains Aquifer using Landsat satellite data</title>
       <link>/talk/gsa2017/</link>
       <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
@@ -260,15 +269,6 @@ new_content(path = &amp;#39;publication/food-energy-water-nexus.md&amp;#39;,
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
       <guid>/talk/agu2015/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Telecoupling in urban water systems: an examination of Beijing&#39;s imported water supply</title>
-      <link>/talk/iale2015/</link>
-      <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
-      
-      <guid>/talk/iale2015/</guid>
       <description></description>
     </item>
     
