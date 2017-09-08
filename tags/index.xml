@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Coupled Human-Water Systems</title>
-    <link>https://jdeines.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Coupled Human-Water Systems</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,56 +12,56 @@
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://jdeines.github.io/tags/academic/</link>
+      <link>/tags/academic/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/tags/academic/</guid>
+      <guid>/tags/academic/</guid>
       <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Agriculture</title>
-      <link>https://jdeines.github.io/tags/agriculture/</link>
+      <link>/tags/agriculture/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/tags/agriculture/</guid>
+      <guid>/tags/agriculture/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demo</title>
-      <link>https://jdeines.github.io/tags/demo/</link>
+      <link>/tags/demo/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/tags/demo/</guid>
+      <guid>/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Irrigation</title>
-      <link>https://jdeines.github.io/tags/irrigation/</link>
+      <link>/tags/irrigation/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/tags/irrigation/</guid>
+      <guid>/tags/irrigation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
-      <link>https://jdeines.github.io/tags/r/</link>
+      <link>/tags/r/</link>
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/tags/r/</guid>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Remote Sensing</title>
-      <link>https://jdeines.github.io/tags/remote-sensing/</link>
+      <link>/tags/remote-sensing/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/tags/remote-sensing/</guid>
+      <guid>/tags/remote-sensing/</guid>
       <description></description>
     </item>
     

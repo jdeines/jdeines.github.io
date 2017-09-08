@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on Coupled Human-Water Systems</title>
-    <link>https://jdeines.github.io/publication/</link>
+    <link>/publication/</link>
     <description>Recent content in Publications on Coupled Human-Water Systems</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,65 +11,83 @@
     <atom:link href="/publication/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Annual irrigation dynamics in the US northern High Plains derived from Landsat satellite data</title>
+      <link>/publication/irrigation-mapping/</link>
+      <pubDate>Thu, 07 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/irrigation-mapping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Quantifying changes in water use and groundwater availability in a megacity using novel integrated systems modeling</title>
-      <link>https://jdeines.github.io/publication/beijing-model/</link>
+      <link>/publication/beijing-model/</link>
       <pubDate>Fri, 11 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/publication/beijing-model/</guid>
+      <guid>/publication/beijing-model/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Urban water sustainability: Framework and application</title>
-      <link>https://jdeines.github.io/publication/urban-water/</link>
+      <link>/publication/urban-water/</link>
       <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/publication/urban-water/</guid>
+      <guid>/publication/urban-water/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Complex water management in modern agriculture: Trends in the water-energy-food nexus over the High Plains Aquifer</title>
-      <link>https://jdeines.github.io/publication/food-water-energy-nexus/</link>
+      <link>/publication/food-water-energy-nexus/</link>
       <pubDate>Sat, 01 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/publication/food-water-energy-nexus/</guid>
+      <guid>/publication/food-water-energy-nexus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Changes in forest composition in Ohio between Euro-American Settlement and the Present</title>
-      <link>https://jdeines.github.io/publication/ohio-forests/</link>
+      <link>/publication/ohio-forests/</link>
       <pubDate>Wed, 01 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/publication/ohio-forests/</guid>
+      <guid>/publication/ohio-forests/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Telecoupling in urban water systems: An examination of Beijing&#39;s imported water supply</title>
-      <link>https://jdeines.github.io/publication/telecoupling-beijing/</link>
+      <link>/publication/telecoupling-beijing/</link>
       <pubDate>Mon, 01 Feb 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/publication/telecoupling-beijing/</guid>
+      <guid>/publication/telecoupling-beijing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tradeoffs among Ecosystem Services Associated with Global Tilapia Introductions</title>
+      <link>/publication/tilapia/</link>
+      <pubDate>Fri, 08 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/tilapia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Traits associated with drought survival in three Australian tropical rainforest seedlings</title>
-      <link>https://jdeines.github.io/publication/drought-traits/</link>
+      <link>/publication/drought-traits/</link>
       <pubDate>Wed, 23 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/publication/drought-traits/</guid>
+      <guid>/publication/drought-traits/</guid>
       <description></description>
     </item>
     
     <item>
       <title>An assessment of invasion risk from assisted migration</title>
-      <link>https://jdeines.github.io/publication/assisted-migration/</link>
+      <link>/publication/assisted-migration/</link>
       <pubDate>Sat, 28 Jun 2008 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/publication/assisted-migration/</guid>
+      <guid>/publication/assisted-migration/</guid>
       <description></description>
     </item>
     

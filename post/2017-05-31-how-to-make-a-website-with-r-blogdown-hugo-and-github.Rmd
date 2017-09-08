@@ -111,8 +111,11 @@ Not really sure if this is necessary...but make a few changes to site, such as a
 # make a test post if you're into that
 new_post('Hello World')
 
-# compile site changes
+# compile site changes: preview within R Studio
 serve_site() # then hit stop
+
+# compile site without preview:
+build_site()
 ```
 
 ### Back to Git Bash
@@ -129,7 +132,7 @@ git push origin master
 And Voila! your website should now be available at username.github.io, and you should have a whole mess of files in your username.github.io repository now. Repeat those steps for any website changes you make: 
 
 * work on your site in RStudio
-* run `serve_site()`
+* run `build_site()`
 * open Git Bash, cd to your public folder, and add/commit/push changes
 
 I had also made a local repository for username.github.io...but I'm not sure if that's necessary either. I haven't used it yet, and you can always recreate the files pretty easily with blogdown/Hugo. 
@@ -158,6 +161,6 @@ There's no way to remove files from the website without re-generating the full p
 
 * manually delete the contents of the public folder on your computer from the website-huge folder
 * delete the contents of jdeines.github.io using that cloned repository and commit
-* re-run `serve_site()`, which will regenerate all of the pages
+* re-run `build_site()`, which will regenerate all of the pages
 * then add/commit/push that to Github.
 

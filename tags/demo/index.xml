@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Demo on Coupled Human-Water Systems</title>
-    <link>https://jdeines.github.io/tags/demo/</link>
+    <link>/tags/demo/</link>
     <description>Recent content in Demo on Coupled Human-Water Systems</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>CLASS Project</title>
-      <link>https://jdeines.github.io/project/class-external/</link>
+      <link>/project/class-external/</link>
       <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/project/class-external/</guid>
+      <guid>/project/class-external/</guid>
       <description></description>
     </item>
     

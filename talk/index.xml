@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recent &amp; Upcoming Talks on Coupled Human-Water Systems</title>
-    <link>https://jdeines.github.io/talk/</link>
+    <link>/talk/</link>
     <description>Recent content in Recent &amp; Upcoming Talks on Coupled Human-Water Systems</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,29 +11,38 @@
     <atom:link href="/talk/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Mapping annual irrigation dynamics in the northern US High Plains Aquifer using Landsat satellite data</title>
+      <link>/talk/gsa2017/</link>
+      <pubDate>Wed, 25 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/gsa2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Multi-year mapping of irrigated croplands over the US High Plains Aquifer using satellite data</title>
-      <link>https://jdeines.github.io/talk/agu2016/</link>
+      <link>/talk/agu2016/</link>
       <pubDate>Fri, 16 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/talk/agu2016/</guid>
+      <guid>/talk/agu2016/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantifying the impact of a transboundary streamflow agreement on groundwater resources in the US High Plains Aquifer</title>
-      <link>https://jdeines.github.io/talk/agu2015/</link>
+      <link>/talk/agu2015/</link>
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/talk/agu2015/</guid>
+      <guid>/talk/agu2015/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Telecoupling in urban water systems: an examination of Beijing&#39;s imported water supply</title>
-      <link>https://jdeines.github.io/talk/iale2015/</link>
+      <link>/talk/iale2015/</link>
       <pubDate>Thu, 17 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://jdeines.github.io/talk/iale2015/</guid>
+      <guid>/talk/iale2015/</guid>
       <description></description>
     </item>
     
