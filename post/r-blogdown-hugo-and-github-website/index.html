@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="author" content="Jillian Deines">
+  <meta name="description" content="PhD Candidate">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://jdeines.github.io/post/r-blogdown-hugo-and-github-website/">
+
+  
+
+  <title>How to make a website with R blogdown, Hugo, and GitHub | Coupled Human-Water Systems</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Coupled Human-Water Systems</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">How to make a website with R blogdown, Hugo, and GitHub</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-05-31 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      May 31, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="/categories/r">R</a
+    >, 
+    
+    <a href="/categories/hugo">Hugo</a
+    >, 
+    
+    <a href="/categories/github">Github</a
+    >, 
+    
+    <a href="/categories/website">website</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=How%20to%20make%20a%20website%20with%20R%20blogdown%2c%20Hugo%2c%20and%20GitHub&amp;url=https%3a%2f%2fjdeines.github.io%2fpost%2fr-blogdown-hugo-and-github-website%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fjdeines.github.io%2fpost%2fr-blogdown-hugo-and-github-website%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fjdeines.github.io%2fpost%2fr-blogdown-hugo-and-github-website%2f&amp;title=How%20to%20make%20a%20website%20with%20R%20blogdown%2c%20Hugo%2c%20and%20GitHub"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fjdeines.github.io%2fpost%2fr-blogdown-hugo-and-github-website%2f&amp;title=How%20to%20make%20a%20website%20with%20R%20blogdown%2c%20Hugo%2c%20and%20GitHub"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=How%20to%20make%20a%20website%20with%20R%20blogdown%2c%20Hugo%2c%20and%20GitHub&amp;body=https%3a%2f%2fjdeines.github.io%2fpost%2fr-blogdown-hugo-and-github-website%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <p>R Markdown has long been a key component of my research workflow, providing a legible “lab notebook” for my daily analyses. I’ve wanted to transition my Wordpress-based website to GitHub Pages for some time, preferably using R Markdown to better integrate into my workflow. I was pretty thrilled to discover the R <code>blogdown</code>, Hugo, and GitHub pages combination. I was able to set it up in an afternoon, and I have high hopes that it will be a good system to allow me to share my research and analyses with a broader audience.</p>
+<p><strong>Update 19 October, 2017:</strong> RStudio has built in a lot of these functions into their IDE now; I’d check <a href="https://bookdown.org/yihui/blogdown/">The Blogdown Documentation</a> for more updated information. A few notes are added at the very bottom of this page.</p>
+<p>This post is a “how-to”, but due to time limitations it’s more of a cheat-sheet to my future self than a full tutorial - basic Git/Github knowledge, etc., is assumed. For more complete coverage, here are a few resources I used to piece this together (note some really good information was also provided in the comment sections of these blog posts):</p>
+<ul>
+<li><a href="https://proquestionasker.github.io/blog/Making_Site/" class="uri">https://proquestionasker.github.io/blog/Making_Site/</a></li>
+<li><a href="http://robertmyles.github.io/2017/02/01/how-to-make-a-github-pages-blog-with-rstudio-and-hugo/" class="uri">http://robertmyles.github.io/2017/02/01/how-to-make-a-github-pages-blog-with-rstudio-and-hugo/</a></li>
+</ul>
+<p><em>Disclaimer: There’s a very good chance that the route I took was not the most efficient. I also use Windows and haven’t considered other systems for this post. User beware.</em></p>
+<div id="general-approach" class="section level2">
+<h2>General approach</h2>
+<p>Github pages expects the website to be in the master branch, but blogdown stores all of the final site elements in a “public” subfolder. There seem to be two main approaches to get them to play nicely together. In one (described in the first link above), the user creates a sub branch in the main repository to store all of the source files in, leaving the public folder materials in the main branch. In the second method (described in the second post), the user creates two repositories on Github. One is the main username.github.io pages repo, the other is for all of the source files. These are then linked using Git Submodules. I chose to use the latter approach.</p>
+<div id="blogdown-and-hugo" class="section level3">
+<h3>Blogdown and Hugo</h3>
+<p>First thing’s first: the <code>blogdown</code> package and <a href="https://gohugo.io/">Hugo</a> need to be installed. You can also begin choosing your theme at this point - <a href="http://themes.gohugo.io/">find a theme here</a>.</p>
+<p>In R Studio:</p>
+<pre class="r"><code># install Blogdown from Github
+install.packages(&#39;devtools&#39;)
+devtools::install_github(&#39;rstudio/blogdown&#39;)
+
+# use blogdown to install Hugo
+library(blogdown)
+install_hugo()</code></pre>
+</div>
+<div id="github" class="section level3">
+<h3>Github</h3>
+<p>Set up your Github repositories. We’ll follow the “User Page” example where your website is going to use your Github username: username.github.io.</p>
+<p>Using the <code>+</code> icon in the upper right corner of your github page, create the following new repositories. Don’t bother creating a README.md, as <code>blogdown</code> needs an empty directory. I think. At any rate, you don’t need a README.</p>
+<ul>
+<li>username.github.io, replacing ‘username’ with your username. This will be used to host your site on the master branch, using the ‘public’ folder produced from Hugo</li>
+<li>website-hugo - This repository will contain all the source files from blogdown/Hugo</li>
+</ul>
+</div>
+<div id="back-to-rstudio" class="section level3">
+<h3>Back to RStudio</h3>
+<p>Next we need to create the site in RStudio using <code>blogdown</code> and Hugo, and then link this with the two repositories. In my normal research life, I tend to use R Projects with the built-in git capabilities, but for some reason, that gave me a lot of problems in this case. So I created an R Project for the Hugo source files, but then manually added Git to the folder and manually linked it with Github via Git Bash (rather than just intializaing the R Project straight from the Github repository, which is what I usually do. That kept crashing for me today).</p>
+<p>So, either create an R Project or just use a dedicated working directory for your website source files. If not using an R Project, set your working directory using <code>setwd(&quot;path/to/your/folder&quot;)</code>. Note that commands such as <code>new_site()</code> and <code>serve_site()</code> will load your website in the RStudio viewer, and you will need to hit the stop sign to exit viewing mode and go back to coding.</p>
+<p>This is also where you will install your theme, <a href="http://themes.gohugo.io/">found here</a>. Being an academic type, I chose <a href="http://themes.gohugo.io/academic/">Academic</a>.</p>
+<pre class="r"><code># create your site
+library(blogdown)
+new_site() # then hit stop
+
+# install theme
+install_theme(&quot;gcushen/hugo-academic&quot;, theme_example = TRUE, update_config = TRUE)
+
+# make/view website with new theme
+serve_site() # then hit stop</code></pre>
+<p>You’ll notice there are now a bunch of folders and files in your working directory, including the ‘public’ folder. Don’t move anything manually - we’ll do it in Git Bash.</p>
+</div>
+<div id="git-bashterminal" class="section level3">
+<h3>Git Bash/Terminal</h3>
+<p>This part got a little fuzzy for me, because I ran into several problems including SSH authentication, the R Project Git confusion I mentioned above, and I seemed to also have a problem using the git submodule command on an empty repo. So this could probably be tweaked over time, because I’m not sure if all the steps I took are required in sequence.</p>
+<p>Open your terminal/Git Bash and <code>cd</code> to your project directory for the source files (website-hugo to match my github repo, in my case). If you’re not set up with SSH yet, <a href="https://help.github.com/articles/connecting-to-github-with-ssh/">do that here</a>.</p>
+<p>Remove the public folder</p>
+<pre class="r"><code>rm -r public/</code></pre>
+<p>Initialize a git repository</p>
+<pre class="r"><code>git init
+git remote add origin git@github.com:username/website-hugo.git</code></pre>
+<p>Try linking the public folder with your username.github.io repo via a submodule now, but it didn’t work for me just yet…</p>
+<pre class="r"><code>git submodule add git@github.com:username/username.github.io.git public</code></pre>
+<p>Instead, I had to commit and push my hugo source files first, then run the submodule command</p>
+<pre class="r"><code>git add -A
+git commit -m &#39;initial commit&#39;
+git push origin master
+
+git submodule add git@github.com:username/username.github.io.git public</code></pre>
+<p>Leave Git Bash open, but go back to R Studio</p>
+</div>
+<div id="back-to-rstudio-1" class="section level3">
+<h3>Back to RStudio</h3>
+<p>Not really sure if this is necessary…but make a few changes to site, such as altering the config file or trying <code>new_post(&quot;Hello World&quot;)</code>, then “compile” the site again.</p>
+<pre class="r"><code># make a test post if you&#39;re into that
+new_post(&#39;Hello World&#39;)
+
+# compile site changes: preview within R Studio
+serve_site() # then hit stop
+
+# compile site without preview:
+build_site()</code></pre>
+</div>
+<div id="back-to-git-bash" class="section level3">
+<h3>Back to Git Bash</h3>
+<p>Now we need to commit our new changes and push them to the “public” folder. So, if you were already in your project directory:</p>
+<pre class="r"><code>cd public
+
+git add -A
+git commit -m &#39;initial site&#39;
+git push origin master</code></pre>
+<p>And Voila! your website should now be available at username.github.io, and you should have a whole mess of files in your username.github.io repository now. Repeat those steps for any website changes you make:</p>
+<ul>
+<li>work on your site in RStudio</li>
+<li>run <code>build_site()</code></li>
+<li>open Git Bash, cd to your public folder, and add/commit/push changes</li>
+</ul>
+<p>I had also made a local repository for username.github.io…but I’m not sure if that’s necessary either. I haven’t used it yet, and you can always recreate the files pretty easily with blogdown/Hugo.</p>
+</div>
+</div>
+<div id="further-tips-on-creating-content" class="section level2">
+<h2>Further tips on creating content</h2>
+<div id="new-page-types" class="section level3">
+<h3>New page types</h3>
+<p>Blogdown contains wrapper functions to run Huge commands. So instead of <code>hugo new post/my-article-name.md</code>, you enter wrapper functions directly into the console, such as <code>new_post(title=&quot;My article name&quot;)</code>, plus additional arguments as needed (see code examples below.)</p>
+<p>I’m learning this as we speak with this blog post, but the rmd = TRUE argument took me a moment.</p>
+<pre class="r"><code># to make a new blog post, using Rmd instead of md:
+new_post(title=&#39;How to make a website with R blogdown, Hugo, and GitHub&#39;, 
+         rmd = TRUE, 
+         categories = c(&#39;R&#39;, &#39;Hugo&#39;, &#39;Github&#39;,&#39;website&#39;), 
+         tags = c(&#39;R&#39;))
+
+# to make a new publication page:
+new_content(path = &#39;publication/food-energy-water-nexus.md&#39;,
+            kind = &#39;publication&#39;)</code></pre>
+</div>
+<div id="deleting-files-from-website" class="section level3">
+<h3>Deleting files from website</h3>
+<p>There’s no way to remove files from the website without re-generating the full public folder. There’s no problem when adding content, such as new posts, but the only (?) way to remove a post is to:</p>
+<ul>
+<li>manually delete the contents of the public folder on your computer from the website-huge folder</li>
+<li>delete the contents of jdeines.github.io using that cloned repository and commit</li>
+<li>re-run <code>build_site()</code>, which will regenerate all of the pages</li>
+<li>then add/commit/push that to Github.</li>
+</ul>
+</div>
+</div>
+<div id="new-rstudio-add-ins" class="section level2">
+<h2>New RStudio Add-ins</h2>
+<p>Update, October 19, 2017<br />
+More recent versions of RStudio (v 1.1.383) and Blogdown provide a number of built in Add-ins that provide alternate ways to navigate. Here are some tips I’ve learned:</p>
+<div id="updating-your-theme" class="section level3">
+<h3>Updating your theme</h3>
+<p>You can update your theme by forcing a new installation of the theme. Note that this will overwrite any changes you’ve made, and you will need to specifically check your <code>config.toml</code> and front matter on all content pages to ensure they match the settings in the new files. It’s a good idea to rename the current theme folder under the <code>themes</code> folder to ensure you can revert back if things go wonky.</p>
+<p>To install the academic theme again:</p>
+<pre class="r"><code># update theme by overwriting
+install_theme(&quot;gcushen/hugo-academic&quot;, theme_example = FALSE, update_config = TRUE, force = TRUE)</code></pre>
+<p>I also made a new site with the updated theme in order to easily check for differences in the settings but not muddy my website project. To do this, I:</p>
+<ul>
+<li>In RStudio, go to File &gt; New Project &gt; New Directory and select build a website</li>
+<li>Fill out the form, and for the academic theme enter ‘gushen/hugo-academic’ in the theme option. Uncheck the boxes.</li>
+</ul>
+</div>
+<div id="recommended-workflow" class="section level3">
+<h3>Recommended Workflow</h3>
+<p>Modified from <a href="https://bookdown.org/yihui/blogdown/workflow.html">The Blogdown Docs</a></p>
+<ul>
+<li>Open the project in RStudio</li>
+<li>Set <code>options(servr.daemon) = FALSE</code>, since <code>true</code> repetedly crashed my RStudio. You can also add this to your .Rprofile if you’d prefer</li>
+<li>To preview site, click the RStudio Add-in <code>Serve Site</code>. YOu can keep this active as your work to update as you go (or encounter errors as you go, very helpful)</li>
+<li>Under Tools &gt; Project Options, be sure that the “preview site” box is unchecked under Build Tools.</li>
+<li>To publish, RESTART the R session and run <code>blogdown::hugo_build()</code>. This will process your website into the public/ directory.</li>
+<li>Note: never hit the <code>knit</code> button</li>
+</ul>
+<p>My submodule connection broke somehow, so I then:</p>
+<ul>
+<li>delete the contents of a separate R project which houses my website files</li>
+<li>copy and paste the public/ directory into this folder</li>
+<li>push those changes to my jdeines.github.io repository</li>
+</ul>
+<p>Someday I’ll fix that. There are some updated? instructions for that <a href="https://bookdown.org/yihui/blogdown/github-pages.html">here</a>.</p>
+</div>
+</div>
+
+    </div>
+
+    
+    
+    
+    <div class="article-tags">
+      
+      <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+      
+    </div>
+    
+    
+
+  </div>
+
+</article>
+
+
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Jillian Deines &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
