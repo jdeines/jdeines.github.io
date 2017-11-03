@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.30.2" />
+  <meta name="author" content="Jillian Deines">
+  <meta name="description" content="PhD Candidate">
+
+  
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+
+
+  
+
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7cMerriweather%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="/post/making-an-r-package/">
+
+  
+
+  <title>Making an R Package | Coupled Human-Water Systems</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Coupled Human-Water Systems</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#publications_selected">
+            
+            <span>Publications</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#talks">
+            
+            <span>Talks</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Making an R Package</h1>
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2017-11-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      Nov 3, 2017
+    </time>
+  </span>
+
+  
+
+  
+  
+
+  
+  
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Making%20an%20R%20Package&amp;url=%2fpost%2fmaking-an-r-package%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fmaking-an-r-package%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fmaking-an-r-package%2f&amp;title=Making%20an%20R%20Package"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fmaking-an-r-package%2f&amp;title=Making%20an%20R%20Package"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Making%20an%20R%20Package&amp;body=%2fpost%2fmaking-an-r-package%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    <div class="article-style" itemprop="articleBody">
+      <p>I first wrote this cheat sheet for myself in September 2014, but in an effort to collate my scripting references in one place, I’m transferring it to the website here. It therefore comes with a very heavy disclaimer that this is now 3 years old and there are very possibly better ways to do this now (the new feature in R Studio for new project &gt; new package seems an obvious example). But I’ve found this super easy and it works for me, so hey.</p>
+<p>This follows steps on quick and dirty package creation found on <a href="http://hilaryparker.com/2014/04/29/writing-an-r-package-from-scratch/">Hilary Parker’s Blog</a>. She absolutely gets the credit for putting this together - I reproduce it here because I always forget where I had originally found it, and I am wary of relying on other people’s website maintenance for future references.</p>
+<div id="setup" class="section level2">
+<h2>Setup</h2>
+<p>Load (and install if necessary) the <code>devtools</code> and <code>roxygen2</code> packages</p>
+<pre class="r"><code>#install.packages(&quot;devtools&quot;)
+library(devtools)
+# devtools::install_github(&quot;klutometis/roxygen&quot;) # development version of roxygen2
+library(roxygen2)</code></pre>
+<div id="create-package-directory" class="section level3">
+<h3>Create Package Directory</h3>
+<p>Create a directory with the bare minimum folders of R packages:</p>
+<ul>
+<li>man folder</li>
+<li>R folder</li>
+<li>.Rbuildignore file</li>
+<li>DESCRIPTION file</li>
+</ul>
+<p>For this, just set the working directory to the location you’d like to store your package, and use the desired package name with the <code>create</code> function.</p>
+<pre class="r"><code>setwd(&#39;C:/Users/deinesji/Dropbox/JillRGis/rPackages&#39;)
+create(&quot;groundwater&quot;)</code></pre>
+<p>Edit the DESCRIPTION file to include contact info, etc. Note that [aut, cre] indicates that I am the author and the creator of the package.</p>
+</div>
+</div>
+<div id="add-functions-and-documentation" class="section level2">
+<h2>Add functions and documentation</h2>
+<p>Add functions to the R folder in the package directory. You can have a separate file for each function (ie, head_function.R to get groundwater model head…) or you can create the functions sequentially in one file, but make sure to add documentation comments before each function.</p>
+<p>Cat example from Hilary Parker. More details on how <code>roxygen2</code> compiles the preceding comments into package documentation format in its <a href="https://github.com/klutometis/roxygen#roxygen2">package documentation</a>.</p>
+<pre class="r"><code>#&#39; A Cat Function
+#&#39;
+#&#39; This function allows you to express your love of cats.
+#&#39; @param love Do you love cats? Defaults to TRUE.
+#&#39; @keywords cats
+#&#39; @export
+#&#39; @examples
+#&#39; cat_function()
+ 
+cat_function &lt;- function(love=TRUE){
+    if(love==TRUE){
+        print(&quot;I love cats!&quot;)
+    }
+    else {
+        print(&quot;I am not a cool person.&quot;)
+    }
+}</code></pre>
+<div id="process-documentation" class="section level3">
+<h3>Process documentation</h3>
+<p>Converts above comments to documentation. This automatically adds in the .Rd files to the <em>man</em> directory, and adds a <em>NAMESPACE</em> file to the main directory. You can <a href="http://r-pkgs.had.co.nz/description.html">read up more</a> about these, but in terms of steps you need to take, you really don’t have to do anything further.</p>
+<p>Set working directory to the package folder you created above.</p>
+<pre class="r"><code>setwd(&quot;./groundwater&quot;)
+document()</code></pre>
+</div>
+</div>
+<div id="install" class="section level2">
+<h2>Install</h2>
+<p>Now it is as simple as installing the package! You need to run this from the parent working directory that contains the cats folder.</p>
+<pre class="r"><code>setwd(&quot;..&quot;)
+install(&quot;groundwater&quot;)</code></pre>
+<p>Now you have a real, live, functioning R package. For example, try typing ?cat_function. You should see the standard help page pop up!</p>
+</div>
+<div id="github-it" class="section level2">
+<h2>Github it</h2>
+<p>If you then host your package on Github, it becomes easy to install for your future self or any collaborators/users, but using <code>devtools:install_github</code>:</p>
+<p><code>install_github('groundwater','jdeines')</code></p>
+</div>
+<div id="basic-overview-for-adding-functions" class="section level2">
+<h2>Basic Overview for Adding Functions</h2>
+<ul>
+<li>Open the package project in RStudio</li>
+<li>create new .r script in ‘R’ directory</li>
+<li>enter function with metadata as demonstrated in the cat example above</li>
+<li>load <code>devtools</code> and <code>roxygen2</code> packages</li>
+<li>setwd to package folder (ie, <code>groundwater</code>)</li>
+<li>run <code>document()</code></li>
+<li>commit changed files</li>
+<li>push to github</li>
+<li>re-install package from github</li>
+</ul>
+</div>
+
+    </div>
+
+    
+    
+    
+    <div class="article-tags">
+      
+      <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+      
+    </div>
+    
+    
+
+  </div>
+
+</article>
+
+
+
+<div class="article-container article-widget">
+  <div class="hr-light"></div>
+  <h3>Related</h3>
+  <ul>
+    
+    <li><a href="/post/r-blogdown-hugo-and-github-website/">How to make a website with R blogdown, Hugo, and GitHub</a></li>
+    
+  </ul>
+</div>
+
+
+
+
+<div class="article-container">
+  
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 Jillian Deines &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
