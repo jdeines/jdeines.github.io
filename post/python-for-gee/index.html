@@ -8,7 +8,7 @@
   <meta name="theme" content="hugo-academic">
   <meta name="generator" content="Hugo 0.30.2" />
   <meta name="author" content="Jillian Deines">
-  <meta name="description" content="PhD Candidate">
+  <meta name="description" content="Postdoctoral Scholar">
 
   
   
@@ -44,11 +44,11 @@
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="/post/update-make-r-packages-via-r-studio/">
+  <link rel="canonical" href="/post/python-for-gee/">
 
   
 
-  <title>Update: Make R Packages via R Studio | Coupled Human-Water Systems</title>
+  <title>Running Google Earth Engine from Python | Coupled Human-Water Systems</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -163,7 +163,7 @@
 
 
   <div class="article-container">
-    <h1 itemprop="name">Update: Make R Packages via R Studio</h1>
+    <h1 itemprop="name">Running Google Earth Engine from Python</h1>
     
 
 <div class="article-metadata">
@@ -183,15 +183,6 @@
   
   
   
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fa fa-folder"></i>
-    
-    <a href="/categories/r">R</a
-    >
-    
-  </span>
-  
   
 
   
@@ -200,35 +191,35 @@
   <ul class="share">
     <li>
       <a class="twitter"
-         href="https://twitter.com/intent/tweet?text=Update%3a%20Make%20R%20Packages%20via%20R%20Studio&amp;url=%2fpost%2fupdate-make-r-packages-via-r-studio%2f"
+         href="https://twitter.com/intent/tweet?text=Running%20Google%20Earth%20Engine%20from%20Python&amp;url=%2fpost%2fpython-for-gee%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-twitter"></i>
       </a>
     </li>
     <li>
       <a class="facebook"
-         href="https://www.facebook.com/sharer.php?u=%2fpost%2fupdate-make-r-packages-via-r-studio%2f"
+         href="https://www.facebook.com/sharer.php?u=%2fpost%2fpython-for-gee%2f"
          target="_blank" rel="noopener">
         <i class="fa fa-facebook"></i>
       </a>
     </li>
     <li>
       <a class="linkedin"
-         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fupdate-make-r-packages-via-r-studio%2f&amp;title=Update%3a%20Make%20R%20Packages%20via%20R%20Studio"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2fpost%2fpython-for-gee%2f&amp;title=Running%20Google%20Earth%20Engine%20from%20Python"
          target="_blank" rel="noopener">
         <i class="fa fa-linkedin"></i>
       </a>
     </li>
     <li>
       <a class="weibo"
-         href="http://service.weibo.com/share/share.php?url=%2fpost%2fupdate-make-r-packages-via-r-studio%2f&amp;title=Update%3a%20Make%20R%20Packages%20via%20R%20Studio"
+         href="http://service.weibo.com/share/share.php?url=%2fpost%2fpython-for-gee%2f&amp;title=Running%20Google%20Earth%20Engine%20from%20Python"
          target="_blank" rel="noopener">
         <i class="fa fa-weibo"></i>
       </a>
     </li>
     <li>
       <a class="email"
-         href="mailto:?subject=Update%3a%20Make%20R%20Packages%20via%20R%20Studio&amp;body=%2fpost%2fupdate-make-r-packages-via-r-studio%2f">
+         href="mailto:?subject=Running%20Google%20Earth%20Engine%20from%20Python&amp;body=%2fpost%2fpython-for-gee%2f">
         <i class="fa fa-envelope"></i>
       </a>
     </li>
@@ -241,81 +232,110 @@
 </div>
 
     <div class="article-style" itemprop="articleBody">
-      <p>I just posted about <a href="https://jdeines.github.io/post/making-an-r-package/">making R packages</a> based on 2014 material using <code>roxygen2</code> directly. As it turns out, the R Studio menus for this are even more convenient. I wanted to leave the previous post for a non-R-Studio reference, but here’s the R Studio workflow:</p>
-<div id="using-r-studio-menus-to-create-a-new-package" class="section level2">
-<h2>Using R Studio Menus to Create a New Package</h2>
+      <p>pretty decent conda tutorial from Don/Geohackweek: <a href="https://geohackweek.github.io/Introductory/01-conda-tutorial/" class="uri">https://geohackweek.github.io/Introductory/01-conda-tutorial/</a></p>
 <ul>
-<li>File -&gt; New Project -&gt; New Directory</li>
-<li>Choose “R Package”</li>
-<li>Enter the desired package name and location on your local system</li>
-<li>Make sure the “Create a git repository” is checked</li>
-<li>hit the <code>Create Project</code> button</li>
-<li>Edit the ‘DESCRIPTION’ file as needed.</li>
+<li>Install anaconda/python if you have not.</li>
+<li>Basics: install via Anaconda, as described in this <a href="https://www.datacamp.com/community/tutorials/installing-anaconda-mac-os-x">DataCamp article</a>. you only ever need 1 version of Anaconda installed</li>
+<li>check to see if you need to update Conda: <code>$ conda update -n base conda</code></li>
+<li>the Earth Engine API uses Python 2.6 or 2.7 (?), so either choose Anaconda for 2.7, or go ahead and get Anaconda with 3.6 (or whatever is now the most recent) and subsequently use that version of Anaconda to install 2.7</li>
+<li>Install 2.7</li>
+<li>in terminal, create a python 2.7 environment: <code>$ conda create -n py27 python=2.7</code></li>
+<li>activate the <code>py27</code> environment just created: <code>$ source activate py27</code>
+<ul>
+<li>note I think this would just be <code>$ activate py27</code> for Windows</li>
+</ul></li>
+<li>side note: to see all environments on your system: <code>$ conda info --envs</code> or <code>$ conda env list</code>; the activated environment is starred *</li>
 </ul>
+<div id="a-note-on-conda-environments" class="section level2">
+<h2>A note on conda environments</h2>
+<p>conda environments specify a set of packages to be used in 1 or more projects. you can create new environments by using an environment file (YAML format, xyz.yml) or by manually specifying packages.</p>
+<p>Its good practice to use projectenviro.yml files so it’s all there an reproducible. An example, which would be in a text file with extension environment.yml and would load a python 3.6 environment along with the package ‘pyjokes’ via pip install:</p>
+<pre class="r"><code>name: testenv
+channels:
+- conda-forge
+dependencies:
+- python=3.6
+- pip
+- pip:
+    - pyjokes</code></pre>
+<p>You would then install this environment.yml file to create a conda environment called ‘testenv’:</p>
+<pre><code>$ conda env create --file environment.yml</code></pre>
 </div>
-<div id="recommended-enable-roxygen-for-documentation" class="section level2">
-<h2>Recommended: Enable Roxygen for documentation</h2>
-<p>The <code>roxygen2</code> packages make it much easier to include documentation with your functions. To enable Roxygen when you build your packages:</p>
-<ul>
-<li>Tools -&gt; Project Options -&gt; Build Tools</li>
-<li>Check “Generate documentation with Roxygen”</li>
-<li>Accept defaults unless otherwise inclined.</li>
-</ul>
-<p>I still like Hilary Parker’s <code>cat_function</code> example to demonstrate how to use enter metadata for the function’s documentation in a roxygen friendly manner:</p>
-<pre class="r"><code>#&#39; A Cat Function
-#&#39;
-#&#39; This function allows you to express your love of cats.
-#&#39; @param love Do you love cats? Defaults to TRUE.
-#&#39; @keywords cats
-#&#39; @export
-#&#39; @examples
-#&#39; cat_function()
- 
-cat_function &lt;- function(love=TRUE){
-    if(love==TRUE){
-        print(&quot;I love cats!&quot;)
-    }
-    else {
-        print(&quot;I am not a cool person.&quot;)
-    }
-}</code></pre>
-<p>Note the default template function, hello.R, does come with a .Rd documentation file in the ‘man’ folder if you’d prefer to do it manually.</p>
+<div id="get-setup-with-gee" class="section level2">
+<h2>Get setup with GEE</h2>
+<p>terminal, python 2.7:</p>
+<ol style="list-style-type: decimal">
+<li>install Google APIs client library</li>
+</ol>
+<pre><code>pip install google-api-python-client</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>check that the functioning crypto libraries are installed:</li>
+</ol>
+<pre><code>python -c &quot;from oauth2client import crypt&quot;</code></pre>
+<p>If you get an error, install a Crypto library:</p>
+<pre><code>pip install PyCrypto</code></pre>
+<p>install the earth engine python api</p>
+<pre><code>pip install earthengine-api</code></pre>
+<p>I still got an error message from <code>python -c &quot;from oauth2client import crypt&quot;</code> so I then also explicitly installed oauth2client (I had been working in a fresh environment I recently created)</p>
+<pre><code>pip install oauth2client
+python -c &quot;from oauth2client import crypt&quot;</code></pre>
+<p>set up authentication credentials</p>
+<pre><code>python -c &quot;import ee; ee.Initialize()&quot;
+
+# and when prompted, possibly in a new terminal window but I didn&#39;t read that first
+# and it seems fine to run in the same terminal...
+earthengine authenticate</code></pre>
+<p>Running this command opens a web browser window where you login with your google account and authenticate, finally copying an authentication and pasting it back into the command prompt</p>
+<p>Should receive a message “successfully saved authorization token”</p>
 </div>
-<div id="build-the-package" class="section level2">
-<h2>Build the Package</h2>
-<p>See <a href="https://support.rstudio.com/hc/en-us/articles/200486508-Building-Testing-and-Distributing-Packages">R Studio</a> for more info. Under the Build Menu or Tab, you can:</p>
-<ul>
-<li>run a check</li>
-<li>build a source package (seems to run devtools::build())</li>
-<li>build a binary package</li>
-</ul>
+<div id="test-it" class="section level2">
+<h2>Test it</h2>
+<p>in future: * open terminal * activate environment <code>source activate py27</code> where py27 is the environment name * (1x) <code>conda install spyder</code> * <code>spyder</code> *</p>
+<p>Then run</p>
+<pre><code># Import the Earth Engine Python Package
+import ee
+
+# Initialize the Earth Engine object, using the authentication credentials.
+ee.Initialize()
+
+# Print the information for an image asset.
+image = ee.Image(&#39;srtm90_v4&#39;)
+print(image.getInfo())</code></pre>
+<p>and if everything is correct, the metadata for an image should be printed</p>
 </div>
-<div id="put-package-on-github" class="section level2">
-<h2>Put Package on Github</h2>
-<p>If you then host your package on Github, it becomes easy to install for your future self or any collaborators/users, but using <code>devtools:install_github</code>:</p>
-<p><code>install_github('username','repositoryName')</code></p>
-<p>Assuming you already initialized a git repository from the ‘create new package’ menu:</p>
+<div id="going-further" class="section level2">
+<h2>going further</h2>
+<p>That was pretty bare bones. Let’s assume I want more packages in my environment</p>
 <ul>
-<li>In GitHub, create a new repository with the desired name. for simplicity, don’t add any readme files or licenses at this time</li>
-<li>open a shell window from within your package R project (working directory will be set by default to the package location)</li>
-<li>git add -A</li>
-<li>git commit -m ‘initial commit’</li>
-<li>git remote add origin <a href="https://github.com/username/repoName.git" class="uri">https://github.com/username/repoName.git</a></li>
-<li>git push -u origin master</li>
-<li>semi-optional: add a README.md file</li>
+<li>open terminal</li>
+<li>activate environment: <code>source activate py27</code></li>
+<li>list existing packages in environment: <code>conda list -n py27</code></li>
 </ul>
+<p>There’s a lot there but not some of what I anticipate needing. I think I can use <code>conda install</code> and <code>pip install</code> interchangably here, except in cases where something isn’t on conda and I need to use pip.</p>
+<pre><code># one at a time
+conda install numpy 
+
+# or many at once
+conda install scipy pandas gdal matplotlib geopandas rasterio</code></pre>
+<div id="installing-packages-not-on-conda" class="section level3">
+<h3>installing packages not on conda</h3>
+<p>George Azzari’s <code>gee_tools</code> package is (hosted on Github)[<a href="https://github.com/george-azzari/gee_tools" class="uri">https://github.com/george-azzari/gee_tools</a>] and not found via conda install or pip install.</p>
+<p>So, I can tell it to install from git:</p>
+<pre><code>pip install git+git://github.com/george-azzari/gee_tools.git</code></pre>
+<p>Seems good!</p>
 </div>
-<div id="basic-overview-for-adding-functions" class="section level2">
-<h2>Basic Overview for Adding Functions</h2>
+</div>
+<div id="test-gee_tools" class="section level1">
+<h1>test gee_tools</h1>
+<p>See if I can run something. Using Spyder here for no good reason at all, except I read the internet about Spyder vs PyCharm and decided both seem to have their advantages, and thus far I’ve actually used Spyder before.</p>
+<p>To do this from the beginning:</p>
 <ul>
-<li>Open the package project in RStudio</li>
-<li>create new .R script in ‘R’ directory</li>
-<li>enter function with metadata as demonstrated in the cat example above</li>
-<li>check and/or build the package using R Studio menus</li>
-<li>commit changed files</li>
-<li>push to github</li>
-<li>re-install package for local use (either from Github or from within the R Studio Build menu)</li>
+<li>open the terminal</li>
+<li>activate python environment: <code>source activate py27</code></li>
+<li>launch spyder, which I’ve already installed in this environment above: <code>spyder</code></li>
 </ul>
+<p>The rest will be the script run in Spyder:</p>
+<pre><code></code></pre>
 </div>
 
     </div>
@@ -325,7 +345,7 @@ cat_function &lt;- function(love=TRUE){
     
     <div class="article-tags">
       
-      <a class="btn btn-primary btn-outline" href="/tags/r">R</a>
+      <a class="btn btn-primary btn-outline" href="/tags/earthengine-python">EarthEngine, python</a>
       
     </div>
     
@@ -336,18 +356,6 @@ cat_function &lt;- function(love=TRUE){
 </article>
 
 
-
-<div class="article-container article-widget">
-  <div class="hr-light"></div>
-  <h3>Related</h3>
-  <ul>
-    
-    <li><a href="/post/making-an-r-package/">Making an R Package</a></li>
-    
-    <li><a href="/post/r-blogdown-hugo-and-github-website/">How to make a website with R blogdown, Hugo, and GitHub</a></li>
-    
-  </ul>
-</div>
 
 
 
